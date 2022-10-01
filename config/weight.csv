@@ -1,0 +1,7 @@
+﻿position,lifeStatic,attackStatic,defendStatic,attackPercentage,lifePercentage,defendPercentage,elementalMastery,recharge,thunderBonus,fireBonus,waterBonus,iceBonus,windBonus,rockBonus,dendroBonus,physicalBonus,critical,criticalDamage,cureEffect
+flower,1,,,,,,,,,,,,,,,,,,
+feather,,1,,,,,,,,,,,,,,,,,
+sand,,,,1333,1334,1333,500,500,,,,,,,,,,,
+cup,,,,766,767,767,100,,200,200,200,200,200,200,200,200,,,
+head,,,,1100,1100,1100,200,,,,,,,,,,500,500,500
+secondary,150,150,150,100,100,100,100,100,,,,,,,,,75,75,
