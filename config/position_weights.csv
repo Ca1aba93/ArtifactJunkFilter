@@ -1,0 +1,7 @@
+﻿position,attackPercentage,lifePercentage,defendPercentage,elementalMastery,recharge,critical,criticalDamage
+flower,,,,,,,
+feather,,,,,,,
+sand,1.8,1.8,1.8,1.8,2.2,,
+cup,1.8,1.8,1.8,1.8,,,
+head,1.8,1.8,1.8,1.8,,2.2,2.2
+sec,1,1,1,1,1,1.333,1.333

@@ -1,0 +1,27 @@
+flower_full = ["flower", 4, "lifeStatic", "critical", "criticalDamage", "recharge", "elementalMastery"]
+flower_zero = ["flower", 3, "lifeStatic", "attackStatic", "defendStatic", "lifePercentage"]
+sand_full = ["sand", 4, "recharge", "critical", "criticalDamage", "elementalMastery", "attackPercentage"]
+sand_zero = ["sand", 3, "lifePercentage", "lifeStatic", "attackStatic", "defendStatic"]
+cup_full = ["cup", 4, "fireBonus", "critical", "criticalDamage", "recharge", "elementalMastery"]
+cup_zero = ["cup", 3, "lifePercentage", "lifeStatic", "attackStatic", "defendStatic"]
+head_full = ["head", 4, "critical", "attackPercentage", "criticalDamage", "recharge", "elementalMastery"]
+head_zero = ["head", 3, "lifePercentage", "lifeStatic", "attackStatic", "defendStatic"]
+
+f_z = expect_of_artifact(flower_zero)  # zero零点
+f_f = expect_of_artifact(flower_full)  # full满分点
+f_b = (f_f / f_z) ** 0.1  # base基点
+
+
+s_z = expect_of_artifact(sand_zero)  # zero零点
+s_f = expect_of_artifact(sand_full)  # full满分点
+s_b = (s_f / s_z) ** 0.1  # base基点
+
+
+c_z = expect_of_artifact(cup_zero)  # zero零点
+c_f = expect_of_artifact(cup_full)  # full满分点
+c_b = (c_f / c_z) ** 0.1  # base基点
+
+
+h_z = expect_of_artifact(head_zero)  # zero零点
+h_f = expect_of_artifact(head_full)  # full满分点
+h_b = (h_f / h_z) ** 0.1  # base基点
