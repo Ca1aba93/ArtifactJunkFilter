@@ -11,10 +11,15 @@ proDir = os.path.split(os.path.realpath(__file__))[0]
 
 with open(proDir + '/mona.json', 'r', encoding='utf8') as jd:
     art_data = json.load(jd)
+with open(proDir + '/good.json', 'r', encoding='utf8') as gd:
+    lock_data = json.load(gd)
 
+good_arts=jsonpath(lock_data, "$.artifacts[*]")
 artifacts = jsonpath(art_data, "$.flower[*]") + jsonpath(art_data, "$.feather[*]") + \
             jsonpath(art_data, "$.sand[*]") + jsonpath(art_data, "$.cup[*]") + jsonpath(art_data, "$.head[*]")
 positions = ['flower', 'feather', 'sand', 'cup', 'head']
+
+
 
 
 class Artifact:
