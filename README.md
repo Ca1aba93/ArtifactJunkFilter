@@ -1,0 +1,4 @@
+# ArtifactJunkFilter
+为原神圣遗物筛选提供工具
+目前只能在IDE或命令行使用
+运行main.py 其中有函数用途和参数解释
