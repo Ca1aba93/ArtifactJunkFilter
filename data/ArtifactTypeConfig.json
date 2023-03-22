@@ -1,0 +1,37 @@
+[
+  {
+   "en": "Flower of Life",
+   "chs": "生之花",
+   "id": "flower",
+   "mona_format": "flower",
+   "allow_main_stats": ["hp"]
+ },
+ {
+   "en": "Plume of Death",
+   "chs": "死之羽",
+   "id": "plume",
+   "mona_format": "feather",
+   "allow_main_stats": ["atk"]
+ },
+ {
+   "en": "Sands of Eon",
+   "chs": "时之沙",
+   "id": "sands",
+   "mona_format": "sand",
+   "allow_main_stats": ["hp%", "atk%", "def%", "em", "er"]
+ },
+ {
+   "en": "Goblet of Eonothem",
+   "chs": "空之杯",
+   "id": "goblet",
+   "mona_format": "cup",
+   "allow_main_stats": ["hp%", "atk%", "def%", "em", "pyro%", "electro%", "cryo%", "hydro%", "dendro%", "anemo%", "geo%", "physical%"]
+ },
+ {
+   "en": "Circlet of Logos",
+   "chs": "理之冠",
+   "id": "circlet",
+   "mona_format": "head",
+   "allow_main_stats": ["hp%", "atk%", "def%", "em", "cr", "cd", "hb"]
+ }
+]

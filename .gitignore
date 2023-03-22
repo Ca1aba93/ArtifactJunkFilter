@@ -1,0 +1,8 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+# 其他
+__pycache__/
+*.pyc
+

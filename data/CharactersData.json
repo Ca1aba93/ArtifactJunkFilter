@@ -1,0 +1,530 @@
+[
+  {
+    "id": "albedo",
+    "en": "Albedo",
+    "chs": "阿贝多",
+    "element": "Geo",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "alhaitham",
+    "en": "Alhaitham",
+    "chs": "艾尔海森",
+    "element": "Dendro",
+    "is_heal": false,
+    "usage_ranking": 2
+  },
+  {
+    "id": "aloy",
+    "en": "Aloy",
+    "chs": "埃洛伊",
+    "element": "Cryo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "amber",
+    "en": "Amber",
+    "chs": "安柏",
+    "element": "Pyro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "arataki_itto",
+    "en": "Arataki Itto",
+    "chs": "荒泷一斗",
+    "element": "Geo",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "barbara",
+    "en": "Barbara",
+    "chs": "芭芭拉",
+    "element": "Hydro",
+    "is_heal": true,
+    "usage_ranking": 5
+  },
+  {
+    "id": "beidou",
+    "en": "Beidou",
+    "chs": "北斗",
+    "element": "Electro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "bennett",
+    "en": "Bennett",
+    "chs": "班尼特",
+    "element": "Pyro",
+    "is_heal": true,
+    "usage_ranking": 1
+  },
+  {
+    "id": "candace",
+    "en": "Candace",
+    "chs": "坎蒂丝",
+    "element": "Hydro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "chongyun",
+    "en": "Chongyun",
+    "chs": "重云",
+    "element": "Cryo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "collei",
+    "en": "Collei",
+    "chs": "柯莱",
+    "element": "Dendro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "cyno",
+    "en": "Cyno",
+    "chs": "赛诺",
+    "element": "Electro",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "diluc",
+    "en": "Diluc",
+    "chs": "迪卢克",
+    "element": "Pyro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "diona",
+    "en": "Diona",
+    "chs": "迪奥娜",
+    "element": "Cryo",
+    "is_heal": true,
+    "usage_ranking": 4
+  },
+  {
+    "id": "dori",
+    "en": "Dori",
+    "chs": "多莉",
+    "element": "Electro",
+    "is_heal": true,
+    "usage_ranking": 5
+  },
+  {
+    "id": "eula",
+    "en": "Eula",
+    "chs": "优菈",
+    "element": "Cryo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "faruzan",
+    "en": "Faruzan",
+    "chs": "珐露珊",
+    "element": "Anemo",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "fischl",
+    "en": "Fischl",
+    "chs": "菲谢尔",
+    "element": "Electro",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "ganyu",
+    "en": "Ganyu",
+    "chs": "甘雨",
+    "element": "Cryo",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "gorou",
+    "en": "Gorou",
+    "chs": "五郎",
+    "element": "Geo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "hu_tao",
+    "en": "Hu Tao",
+    "chs": "胡桃",
+    "element": "Pyro",
+    "is_heal": false,
+    "usage_ranking": 2
+  },
+  {
+    "id": "jean",
+    "en": "Jean",
+    "chs": "琴",
+    "element": "Anemo",
+    "is_heal": true,
+    "usage_ranking": 5
+  },
+  {
+    "id": "kaedehara_kazuha",
+    "en": "Kaedehara Kazuha",
+    "chs": "枫原万叶",
+    "element": "Anemo",
+    "is_heal": false,
+    "usage_ranking": 1
+  },
+  {
+    "id": "kaeya",
+    "en": "Kaeya",
+    "chs": "凯亚",
+    "element": "Cryo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "kamisato_ayaka",
+    "en": "Kamisato Ayaka",
+    "chs": "神里绫华",
+    "element": "Cryo",
+    "is_heal": false,
+    "usage_ranking": 2
+  },
+  {
+    "id": "kamisato_ayato",
+    "en": "Kamisato Ayato",
+    "chs": "神里绫人",
+    "element": "Hydro",
+    "is_heal": false,
+    "usage_ranking": 3
+  },
+  {
+    "id": "keqing",
+    "en": "Keqing",
+    "chs": "刻晴",
+    "element": "Electro",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "klee",
+    "en": "Klee",
+    "chs": "可莉",
+    "element": "Pyro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "kujou_sara",
+    "en": "Kujou Sara",
+    "chs": "九条裟罗",
+    "element": "Electro",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "kuki_shinobu",
+    "en": "Kuki Shinobu",
+    "chs": "久岐忍",
+    "element": "Electro",
+    "is_heal": true,
+    "usage_ranking": 2
+  },
+  {
+    "id": "layla",
+    "en": "Layla",
+    "chs": "莱依拉",
+    "element": "Cryo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "lisa",
+    "en": "Lisa",
+    "chs": "丽莎",
+    "element": "Electro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "mona",
+    "en": "Mona",
+    "chs": "莫娜",
+    "element": "Hydro",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "nahida",
+    "en": "Nahida",
+    "chs": "纳西妲",
+    "element": "Dendro",
+    "is_heal": false,
+    "usage_ranking": 1
+  },
+  {
+    "id": "nilou",
+    "en": "Nilou",
+    "chs": "妮露",
+    "element": "Hydro",
+    "is_heal": false,
+    "usage_ranking": 3
+  },
+  {
+    "id": "ningguang",
+    "en": "Ningguang",
+    "chs": "凝光",
+    "element": "Geo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "noelle",
+    "en": "Noelle",
+    "chs": "诺艾尔",
+    "element": "Geo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "qiqi",
+    "en": "Qiqi",
+    "chs": "七七",
+    "element": "Cryo",
+    "is_heal": true,
+    "usage_ranking": 5
+  },
+  {
+    "id": "raiden_shogun",
+    "en": "Raiden Shogun",
+    "chs": "雷电将军",
+    "element": "Electro",
+    "is_heal": false,
+    "usage_ranking": 1
+  },
+  {
+    "id": "razor",
+    "en": "Razor",
+    "chs": "雷泽",
+    "element": "Electro",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "rosaria",
+    "en": "Rosaria",
+    "chs": "罗莎莉亚",
+    "element": "Cryo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "sangonomiya_kokomi",
+    "en": "Sangonomiya Kokomi",
+    "chs": "珊瑚宫心海",
+    "element": "Hydro",
+    "is_heal": true,
+    "usage_ranking": 2
+  },
+  {
+    "id": "sayu",
+    "en": "Sayu",
+    "chs": "早柚",
+    "element": "Anemo",
+    "is_heal": true,
+    "usage_ranking": 5
+  },
+  {
+    "id": "shenhe",
+    "en": "Shenhe",
+    "chs": "申鹤",
+    "element": "Cryo",
+    "is_heal": false,
+    "usage_ranking": 2
+  },
+  {
+    "id": "shikanoin_heizou",
+    "en": "Shikanoin Heizou",
+    "chs": "鹿野院平藏",
+    "element": "Anemo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "sucrose",
+    "en": "Sucrose",
+    "chs": "砂糖",
+    "element": "Anemo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "tartaglia",
+    "en": "Tartaglia",
+    "chs": "达达利亚",
+    "element": "Hydro",
+    "is_heal": false,
+    "usage_ranking": 3
+  },
+  {
+    "id": "thoma",
+    "en": "Thoma",
+    "chs": "托马",
+    "element": "Pyro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "tighnari",
+    "en": "Tighnari",
+    "chs": "提纳里",
+    "element": "Dendro",
+    "is_heal": false,
+    "usage_ranking": 3
+  },
+  {
+    "id": "traveler_anemo",
+    "en": "Traveler (Anemo)",
+    "chs": "旅行者 (风)",
+    "element": "Anemo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "traveler_dendro",
+    "en": "Traveler (Dendro)",
+    "chs": "旅行者 (草)",
+    "element": "Dendro",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "traveler_electro",
+    "en": "Traveler (Electro)",
+    "chs": "旅行者 (雷)",
+    "element": "Electro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "traveler_geo",
+    "en": "Traveler (Geo)",
+    "chs": "旅行者 (岩)",
+    "element": "Geo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "venti",
+    "en": "Venti",
+    "chs": "温迪",
+    "element": "Anemo",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "wanderer",
+    "en": "Wanderer",
+    "chs": "流浪者",
+    "element": "Anemo",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "xiangling",
+    "en": "Xiangling",
+    "chs": "香菱",
+    "element": "Pyro",
+    "is_heal": false,
+    "usage_ranking": 2
+  },
+  {
+    "id": "xiao",
+    "en": "Xiao",
+    "chs": "魈",
+    "element": "Anemo",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "xingqiu",
+    "en": "Xingqiu",
+    "chs": "行秋",
+    "element": "Hydro",
+    "is_heal": false,
+    "usage_ranking": 1
+  },
+  {
+    "id": "xinyan",
+    "en": "Xinyan",
+    "chs": "辛焱",
+    "element": "Pyro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "yae_miko",
+    "en": "Yae Miko",
+    "chs": "八重神子",
+    "element": "Electro",
+    "is_heal": false,
+    "usage_ranking": 2
+  },
+  {
+    "id": "yanfei",
+    "en": "Yanfei",
+    "chs": "烟绯",
+    "element": "Pyro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "yaoyao",
+    "en": "Yaoyao",
+    "chs": "瑶瑶",
+    "element": "Dendro",
+    "is_heal": true,
+    "usage_ranking": 4
+  },
+  {
+    "id": "yelan",
+    "en": "Yelan",
+    "chs": "夜兰",
+    "element": "Hydro",
+    "is_heal": false,
+    "usage_ranking": 1
+  },
+  {
+    "id": "yoimiya",
+    "en": "Yoimiya",
+    "chs": "宵宫",
+    "element": "Pyro",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "yun_jin",
+    "en": "Yun Jin",
+    "chs": "云堇",
+    "element": "Geo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "zhongli",
+    "en": "Zhongli",
+    "chs": "钟离",
+    "element": "Geo",
+    "is_heal": false,
+    "usage_ranking": 1
+  }
+]

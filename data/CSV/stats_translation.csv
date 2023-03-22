@@ -1,0 +1,25 @@
+﻿en,chs,id,mona_format
+HP,生命值,hp,lifeStatic
+ATK,攻击力,atk,attackStatic
+DEF,防御力,def,defendStatic
+HP%,生命值%,hp%,lifePercentage
+ATK%,攻击力%,atk%,attackPercentage
+DEF%,防御力%,def%,defendPercentage
+Elemental Mastery,元素精通,em,elementalMastery
+Energy Recharge%,元素充能效率,er,recharge
+CRIT Rate%,暴击率,cr,critical
+CRIT DMG%,暴击伤害,cd,criticalDamage
+Healing%,治疗加成,hb,cureEffect
+Pyro,火元素伤害加成,pyro%,fireBonus
+Electro,雷元素伤害加成,electro%,thunderBonus
+Cryo,冰元素伤害加成,cryo%,iceBonus
+Hydro,水元素伤害加成,hydro%,waterBonus
+Dendro,草元素伤害加成,dendro%,dendroBonus
+Anemo,风元素伤害加成,anemo%,windBonus
+Geo,岩元素伤害加成,geo%,rockBonus
+Physical,物理伤害加成,physical%,physicalBonus
+Flower of Life,生之花,flower,flower
+Plume of Death,死之羽,plume,feather
+Sands of Eon,时之沙,sands,sand
+Goblet of Eonothem,空之杯,goblet,cup
+Circlet of Logos,理之冠,circlet,head
