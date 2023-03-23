@@ -42,10 +42,10 @@ xzs_multi_factor = {'atk': 0.03290465, 'atk%': 0.0659015, 'cd': 0.06605, 'cr': 0
                     'def': 0.043501424999999996, 'def%': 0.065667, 'em': 0.0653895,
                     'er': 0.065944395, 'hp': 0.043576104, 'hp%': 0.0659015}
 
-# 权重词典
 sub_weights = {'hp': 150, 'atk': 150, 'def': 150, 'hp%': 100, 'atk%': 100,
                'def%': 100, 'er': 100, 'em': 100, 'cr': 75, 'cd': 75}
-sub_stats_for_all = {'atk%', 'def', 'atk', 'hp', 'em', 'def%', 'hp%', 'cr', 'er', 'cd'}
+
+all_substats = {'atk%', 'def', 'atk', 'hp', 'em', 'def%', 'hp%', 'cr', 'er', 'cd'}
 
 main_weights = {
     "flower": {'hp': 1000},
@@ -53,12 +53,10 @@ main_weights = {
     "sands": {'hp%': 1334, 'atk%': 1333, 'def%': 1333, 'em': 500, 'er': 500},
     "goblet": {'hp%': 767, 'atk%': 766, 'def%': 767, 'em': 100, 'pyro%': 200, 'electro%': 200, 'cryo%': 200,
                'hydro%': 200, 'dendro%': 200, 'anemo%': 200, 'geo%': 200, 'physical%': 200},
-    "circlet": {'hp%': 1100, 'atk%': 1100, 'def%': 1100, 'em': 200, 'cr': 500, 'cd': 500, 'hb': 500}
-}
+    "circlet": {'hp%': 1100, 'atk%': 1100, 'def%': 1100, 'em': 200, 'cr': 500, 'cd': 500, 'hb': 500}}
 
 artifact_types = {'flower', 'plume', 'sands', 'goblet', 'circlet'}
 
-# 副词条均值
 substat_average = {'hp': 253.94000244140625, 'hp%': 0.04954999964684248, 'atk': 16.535000324249268,
                    'atk%': 0.04954999964684248, 'def': 19.675000190734863, 'def%': 0.06194999907165766,
                    'cr': 0.03304999973624945, 'cd': 0.06604999862611294, 'er': 0.05505000054836273,
@@ -127,70 +125,6 @@ def adjust_enhancement_counts(count_list: list, level: int):
     return initial_count, result_list
 
 
-# 将单个mona格式的圣遗物数据转化为标准格式
-def convert_mona_to_standard_format(idx):
-    mona_art = mona_artifacts[idx]
-    std_artifact = {
-        "index": idx,
-        "name": f"artifact_{idx + 1}",
-        "set": mona_id(mona_art['setName']),
-        "type": mona_id(mona_art['position']),
-        "level": mona_art['level'],
-        "rarity": mona_art['star'],
-        "locked": mona_art['omit'],
-        "equipped": "",
-        "main_stat": mona_id(mona_art['mainTag']['name']),
-        "sub_stats": [],
-        "sub_values": []
-    }
-    sub_stats_data = mona_art['normalTags']
-    for sub_stat in sub_stats_data:
-        std_artifact['sub_stats'].append(mona_id(sub_stat['name']))
-        std_artifact['sub_values'].append(float(set_decimal(sub_stat['value'])) if sub_stat['value'] < 1 else int(
-            set_decimal(sub_stat['value'])))
-
-    norms = []
-    enhancement_count_list = []
-    for stat_idx, sub_stat in enumerate(std_artifact['sub_stats']):
-        norms.append(std_artifact['sub_values'][stat_idx] / substat_average[sub_stat])
-        enhancement_count_list.append(find_enhancement_count(sub_stat, std_artifact['sub_values'][stat_idx]))
-
-    std_artifact['norms'] = norms
-    std_artifact['initial_num'], std_artifact['enhancement_count'] = adjust_enhancement_counts(enhancement_count_list,
-                                                                                               std_artifact['level'])
-    return std_artifact
-
-
-# 将全部mona格式圣遗物数据转化为标准格式并储存
-def convert_mona_to_standard_for_all():
-    standard_artifacts = []
-    names_by_type = {
-        'flower': [],
-        'plume': [],
-        'sands': [],
-        'goblet': [],
-        'circlet': []
-    }
-    for idx, mona_art in enumerate(mona_artifacts):
-        if mona_art['star'] != 5:
-            continue  # Exclude 4-star artifacts
-        standard_artifacts.append(convert_mona_to_standard_format(idx))
-        names_by_type[mona_id(mona_art['position'])].append(convert_mona_to_standard_format(idx)['name'])
-    with open(os.path.join(parent_dir, "data\\StandardizedArtifactsData.json"), "w", encoding='utf-8-sig') as f:
-        json.dump(standard_artifacts, f)
-    with open(os.path.join(parent_dir, "data\\ArtifactsNameByType.json"), "w", encoding='utf-8-sig') as f:
-        json.dump(names_by_type, f)
-    return
-
-
-# 从mona格式到id的查找函数
-def mona_id(mona_format: str):
-    mona_to_id_raw_data = stats_data + type_config + sets_data
-    result_dict = [d for d in mona_to_id_raw_data if d['mona_format'] == mona_format][0]
-    result = result_dict['id']
-    return result
-
-
 # 将id格式到中文的查找函数
 def id_chs(the_id: str):
     id_to_chs_raw_data = char_data + sets_data + stats_data + type_config
@@ -248,13 +182,28 @@ def half_up(the_value: float, digit: int):
 def set_decimal(stat_value: float):
     if stat_value >= 1:
         temp2 = Decimal(str(stat_value)).quantize(Decimal("0.00"), rounding=ROUND_HALF_UP)
-        res = Decimal(str(temp2)).quantize(Decimal("0"), rounding=ROUND_HALF_UP)
+        res = int(Decimal(str(temp2)).quantize(Decimal("0"), rounding=ROUND_HALF_UP))
     else:
         temp5 = Decimal(str(stat_value)).quantize(Decimal("0.00000"), rounding=ROUND_HALF_UP)
         temp4 = Decimal(str(temp5)).quantize(Decimal("0.0000"), rounding=ROUND_HALF_UP)
-        res = Decimal(str(temp4)).quantize(Decimal("0.000"), rounding=ROUND_HALF_UP)
+        res = float(Decimal(str(temp4)).quantize(Decimal("0.000"), rounding=ROUND_HALF_UP))
+    return res
+
+
+def set_decimal_for_good(stat_id: str, temp_res: float):
+    if stat_id in {'atk%', 'def%', 'hp%', 'cr', 'er', 'cd'}:
+        temp_res = temp_res / 100
+    else:
+        temp_res = temp_res
+    if temp_res >= 1:
+        temp2 = Decimal(str(temp_res)).quantize(Decimal("0.00"), rounding=ROUND_HALF_UP)
+        res = int(Decimal(str(temp2)).quantize(Decimal("0"), rounding=ROUND_HALF_UP))
+    else:
+        temp5 = Decimal(str(temp_res)).quantize(Decimal("0.00000"), rounding=ROUND_HALF_UP)
+        temp4 = Decimal(str(temp5)).quantize(Decimal("0.0000"), rounding=ROUND_HALF_UP)
+        res = float(Decimal(str(temp4)).quantize(Decimal("0.000"), rounding=ROUND_HALF_UP))
     return res
 
 
 if __name__ == "__main__":
-    convert_mona_to_standard_for_all()
+    pass

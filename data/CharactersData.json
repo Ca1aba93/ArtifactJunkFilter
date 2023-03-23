@@ -5,15 +5,8 @@
     "chs": "阿贝多",
     "element": "Geo",
     "is_heal": false,
-    "usage_ranking": 4
-  },
-  {
-    "id": "alhaitham",
-    "en": "Alhaitham",
-    "chs": "艾尔海森",
-    "element": "Dendro",
-    "is_heal": false,
-    "usage_ranking": 2
+    "usage_ranking": 4,
+    "good_format": "Albedo"
   },
   {
     "id": "aloy",
@@ -21,7 +14,8 @@
     "chs": "埃洛伊",
     "element": "Cryo",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Aloy"
   },
   {
     "id": "amber",
@@ -29,7 +23,8 @@
     "chs": "安柏",
     "element": "Pyro",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Amber"
   },
   {
     "id": "arataki_itto",
@@ -37,7 +32,8 @@
     "chs": "荒泷一斗",
     "element": "Geo",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "AratakiItto"
   },
   {
     "id": "barbara",
@@ -45,7 +41,8 @@
     "chs": "芭芭拉",
     "element": "Hydro",
     "is_heal": true,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Barbara"
   },
   {
     "id": "beidou",
@@ -53,7 +50,8 @@
     "chs": "北斗",
     "element": "Electro",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Beidou"
   },
   {
     "id": "bennett",
@@ -61,7 +59,8 @@
     "chs": "班尼特",
     "element": "Pyro",
     "is_heal": true,
-    "usage_ranking": 1
+    "usage_ranking": 1,
+    "good_format": "Bennett"
   },
   {
     "id": "candace",
@@ -69,7 +68,8 @@
     "chs": "坎蒂丝",
     "element": "Hydro",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Candace"
   },
   {
     "id": "chongyun",
@@ -77,7 +77,8 @@
     "chs": "重云",
     "element": "Cryo",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Chongyun"
   },
   {
     "id": "collei",
@@ -85,7 +86,8 @@
     "chs": "柯莱",
     "element": "Dendro",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Collei"
   },
   {
     "id": "cyno",
@@ -93,7 +95,8 @@
     "chs": "赛诺",
     "element": "Electro",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Cyno"
   },
   {
     "id": "diluc",
@@ -101,7 +104,8 @@
     "chs": "迪卢克",
     "element": "Pyro",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Diluc"
   },
   {
     "id": "diona",
@@ -109,7 +113,8 @@
     "chs": "迪奥娜",
     "element": "Cryo",
     "is_heal": true,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Diona"
   },
   {
     "id": "dori",
@@ -117,7 +122,8 @@
     "chs": "多莉",
     "element": "Electro",
     "is_heal": true,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Dori"
   },
   {
     "id": "eula",
@@ -125,7 +131,8 @@
     "chs": "优菈",
     "element": "Cryo",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Eula"
   },
   {
     "id": "faruzan",
@@ -133,7 +140,8 @@
     "chs": "珐露珊",
     "element": "Anemo",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Faruzan"
   },
   {
     "id": "fischl",
@@ -141,7 +149,8 @@
     "chs": "菲谢尔",
     "element": "Electro",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Fischl"
   },
   {
     "id": "ganyu",
@@ -149,7 +158,8 @@
     "chs": "甘雨",
     "element": "Cryo",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Ganyu"
   },
   {
     "id": "gorou",
@@ -157,7 +167,8 @@
     "chs": "五郎",
     "element": "Geo",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Gorou"
   },
   {
     "id": "hu_tao",
@@ -165,7 +176,8 @@
     "chs": "胡桃",
     "element": "Pyro",
     "is_heal": false,
-    "usage_ranking": 2
+    "usage_ranking": 2,
+    "good_format": "HuTao"
   },
   {
     "id": "jean",
@@ -173,7 +185,8 @@
     "chs": "琴",
     "element": "Anemo",
     "is_heal": true,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Jean"
   },
   {
     "id": "kaedehara_kazuha",
@@ -181,7 +194,8 @@
     "chs": "枫原万叶",
     "element": "Anemo",
     "is_heal": false,
-    "usage_ranking": 1
+    "usage_ranking": 1,
+    "good_format": "KaedeharaKazuha"
   },
   {
     "id": "kaeya",
@@ -189,7 +203,8 @@
     "chs": "凯亚",
     "element": "Cryo",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Kaeya"
   },
   {
     "id": "kamisato_ayaka",
@@ -197,7 +212,8 @@
     "chs": "神里绫华",
     "element": "Cryo",
     "is_heal": false,
-    "usage_ranking": 2
+    "usage_ranking": 2,
+    "good_format": "KamisatoAyaka"
   },
   {
     "id": "kamisato_ayato",
@@ -205,7 +221,8 @@
     "chs": "神里绫人",
     "element": "Hydro",
     "is_heal": false,
-    "usage_ranking": 3
+    "usage_ranking": 3,
+    "good_format": "KamisatoAyato"
   },
   {
     "id": "keqing",
@@ -213,7 +230,8 @@
     "chs": "刻晴",
     "element": "Electro",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Keqing"
   },
   {
     "id": "klee",
@@ -221,7 +239,8 @@
     "chs": "可莉",
     "element": "Pyro",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Klee"
   },
   {
     "id": "kujou_sara",
@@ -229,7 +248,8 @@
     "chs": "九条裟罗",
     "element": "Electro",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "KujouSara"
   },
   {
     "id": "kuki_shinobu",
@@ -237,7 +257,8 @@
     "chs": "久岐忍",
     "element": "Electro",
     "is_heal": true,
-    "usage_ranking": 2
+    "usage_ranking": 2,
+    "good_format": "KukiShinobu"
   },
   {
     "id": "layla",
@@ -245,7 +266,8 @@
     "chs": "莱依拉",
     "element": "Cryo",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Layla"
   },
   {
     "id": "lisa",
@@ -253,7 +275,8 @@
     "chs": "丽莎",
     "element": "Electro",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Lisa"
   },
   {
     "id": "mona",
@@ -261,7 +284,8 @@
     "chs": "莫娜",
     "element": "Hydro",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Mona"
   },
   {
     "id": "nahida",
@@ -269,7 +293,8 @@
     "chs": "纳西妲",
     "element": "Dendro",
     "is_heal": false,
-    "usage_ranking": 1
+    "usage_ranking": 1,
+    "good_format": "Nahida"
   },
   {
     "id": "nilou",
@@ -277,7 +302,8 @@
     "chs": "妮露",
     "element": "Hydro",
     "is_heal": false,
-    "usage_ranking": 3
+    "usage_ranking": 3,
+    "good_format": "Nilou"
   },
   {
     "id": "ningguang",
@@ -285,7 +311,8 @@
     "chs": "凝光",
     "element": "Geo",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Ningguang"
   },
   {
     "id": "noelle",
@@ -293,7 +320,8 @@
     "chs": "诺艾尔",
     "element": "Geo",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Noelle"
   },
   {
     "id": "qiqi",
@@ -301,7 +329,8 @@
     "chs": "七七",
     "element": "Cryo",
     "is_heal": true,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Qiqi"
   },
   {
     "id": "raiden_shogun",
@@ -309,7 +338,8 @@
     "chs": "雷电将军",
     "element": "Electro",
     "is_heal": false,
-    "usage_ranking": 1
+    "usage_ranking": 1,
+    "good_format": "RaidenShogun"
   },
   {
     "id": "razor",
@@ -317,7 +347,8 @@
     "chs": "雷泽",
     "element": "Electro",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Razor"
   },
   {
     "id": "rosaria",
@@ -325,7 +356,8 @@
     "chs": "罗莎莉亚",
     "element": "Cryo",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Rosaria"
   },
   {
     "id": "sangonomiya_kokomi",
@@ -333,7 +365,8 @@
     "chs": "珊瑚宫心海",
     "element": "Hydro",
     "is_heal": true,
-    "usage_ranking": 2
+    "usage_ranking": 2,
+    "good_format": "SangonomiyaKokomi"
   },
   {
     "id": "sayu",
@@ -341,7 +374,8 @@
     "chs": "早柚",
     "element": "Anemo",
     "is_heal": true,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Sayu"
   },
   {
     "id": "shenhe",
@@ -349,15 +383,8 @@
     "chs": "申鹤",
     "element": "Cryo",
     "is_heal": false,
-    "usage_ranking": 2
-  },
-  {
-    "id": "shikanoin_heizou",
-    "en": "Shikanoin Heizou",
-    "chs": "鹿野院平藏",
-    "element": "Anemo",
-    "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 2,
+    "good_format": "Shenhe"
   },
   {
     "id": "sucrose",
@@ -365,7 +392,8 @@
     "chs": "砂糖",
     "element": "Anemo",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Sucrose"
   },
   {
     "id": "tartaglia",
@@ -373,7 +401,8 @@
     "chs": "达达利亚",
     "element": "Hydro",
     "is_heal": false,
-    "usage_ranking": 3
+    "usage_ranking": 3,
+    "good_format": "Tartaglia"
   },
   {
     "id": "thoma",
@@ -381,7 +410,8 @@
     "chs": "托马",
     "element": "Pyro",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Thoma"
   },
   {
     "id": "tighnari",
@@ -389,39 +419,8 @@
     "chs": "提纳里",
     "element": "Dendro",
     "is_heal": false,
-    "usage_ranking": 3
-  },
-  {
-    "id": "traveler_anemo",
-    "en": "Traveler (Anemo)",
-    "chs": "旅行者 (风)",
-    "element": "Anemo",
-    "is_heal": false,
-    "usage_ranking": 5
-  },
-  {
-    "id": "traveler_dendro",
-    "en": "Traveler (Dendro)",
-    "chs": "旅行者 (草)",
-    "element": "Dendro",
-    "is_heal": false,
-    "usage_ranking": 4
-  },
-  {
-    "id": "traveler_electro",
-    "en": "Traveler (Electro)",
-    "chs": "旅行者 (雷)",
-    "element": "Electro",
-    "is_heal": false,
-    "usage_ranking": 5
-  },
-  {
-    "id": "traveler_geo",
-    "en": "Traveler (Geo)",
-    "chs": "旅行者 (岩)",
-    "element": "Geo",
-    "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 3,
+    "good_format": "Tighnari"
   },
   {
     "id": "venti",
@@ -429,7 +428,8 @@
     "chs": "温迪",
     "element": "Anemo",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Venti"
   },
   {
     "id": "wanderer",
@@ -437,7 +437,8 @@
     "chs": "流浪者",
     "element": "Anemo",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Wanderer"
   },
   {
     "id": "xiangling",
@@ -445,7 +446,8 @@
     "chs": "香菱",
     "element": "Pyro",
     "is_heal": false,
-    "usage_ranking": 2
+    "usage_ranking": 2,
+    "good_format": "Xiangling"
   },
   {
     "id": "xiao",
@@ -453,7 +455,8 @@
     "chs": "魈",
     "element": "Anemo",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Xiao"
   },
   {
     "id": "xingqiu",
@@ -461,7 +464,8 @@
     "chs": "行秋",
     "element": "Hydro",
     "is_heal": false,
-    "usage_ranking": 1
+    "usage_ranking": 1,
+    "good_format": "Xingqiu"
   },
   {
     "id": "xinyan",
@@ -469,7 +473,8 @@
     "chs": "辛焱",
     "element": "Pyro",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "Xinyan"
   },
   {
     "id": "yae_miko",
@@ -477,7 +482,8 @@
     "chs": "八重神子",
     "element": "Electro",
     "is_heal": false,
-    "usage_ranking": 2
+    "usage_ranking": 2,
+    "good_format": "YaeMiko"
   },
   {
     "id": "yanfei",
@@ -485,15 +491,8 @@
     "chs": "烟绯",
     "element": "Pyro",
     "is_heal": false,
-    "usage_ranking": 5
-  },
-  {
-    "id": "yaoyao",
-    "en": "Yaoyao",
-    "chs": "瑶瑶",
-    "element": "Dendro",
-    "is_heal": true,
-    "usage_ranking": 4
+    "usage_ranking": 5,
+    "good_format": "Yanfei"
   },
   {
     "id": "yelan",
@@ -501,7 +500,8 @@
     "chs": "夜兰",
     "element": "Hydro",
     "is_heal": false,
-    "usage_ranking": 1
+    "usage_ranking": 1,
+    "good_format": "Yelan"
   },
   {
     "id": "yoimiya",
@@ -509,7 +509,8 @@
     "chs": "宵宫",
     "element": "Pyro",
     "is_heal": false,
-    "usage_ranking": 4
+    "usage_ranking": 4,
+    "good_format": "Yoimiya"
   },
   {
     "id": "yun_jin",
@@ -517,7 +518,8 @@
     "chs": "云堇",
     "element": "Geo",
     "is_heal": false,
-    "usage_ranking": 5
+    "usage_ranking": 5,
+    "good_format": "YunJin"
   },
   {
     "id": "zhongli",
@@ -525,6 +527,7 @@
     "chs": "钟离",
     "element": "Geo",
     "is_heal": false,
-    "usage_ranking": 1
+    "usage_ranking": 1,
+    "good_format": "Zhongli"
   }
 ]

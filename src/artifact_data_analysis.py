@@ -78,7 +78,7 @@ def rule_2(artifact_id: int, config_id: int, evaluation_level):
             evaluation_level = 0
     else:
         # print("type=='goblet'")
-        if evaluation_level < 1 or not check_element(artifact_id, config_id):
+        if not check_element(artifact_id, config_id):
             # print("evaluation_level < 1 or not check_element")
             evaluation_level = 0
     return evaluation_level

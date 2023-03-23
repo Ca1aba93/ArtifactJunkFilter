@@ -1,7 +1,7 @@
 import io
 
 from src.basic_data import get_config_of_xzs, char_data, stats_data, set_config, id_chs, xzs_multi_factor, \
-    get_allowed_main_stats, sub_stats_for_all, sub_weights, get_criteria
+    get_allowed_main_stats, all_substats, sub_weights, get_criteria
 
 
 class XZSConfig:
@@ -67,7 +67,7 @@ class XZSConfig:
     def get_expected_score(self, stats_type: tuple):
         main_stat = stats_type[0]
         sub_stats = stats_type[1:]
-        allowed_sub_stats = sub_stats_for_all.copy()
+        allowed_sub_stats = all_substats.copy()
         allowed_sub_stats.discard(main_stat)
         sub_weight = sub_weights.copy()
         sub_weight.pop(main_stat, None)

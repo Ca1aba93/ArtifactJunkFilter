@@ -1,13 +1,13 @@
 import itertools
 
-from src.basic_data import main_weights, sub_stats_for_all, sub_weights, get_allowed_main_stats
+from src.basic_data import main_weights, all_substats, sub_weights, get_allowed_main_stats
 
 
 # 根据给定的主、副词条范围，生成所有符合要求的主副属性组合（初始3、4词条，不计顺序）
 def get_all_comb(main_range: set, sub_range: set):
     distribution_4stats = []
     distribution_3stats = []
-    all_sub = sub_stats_for_all.copy()
+    all_sub = all_substats.copy()
     sub_complement = all_sub - sub_range
 
     for main_stat in main_range:
@@ -79,7 +79,7 @@ def calculate_prob_for_stats_all_comb(target_main_stats: set, target_sub_stats: 
     """
     # 获取属性允许范围
     allowed_main = get_allowed_main_stats(equip_type)
-    allowed_sub = sub_stats_for_all.copy()
+    allowed_sub = all_substats.copy()
 
     # 如果输入集合为空，则使用最大允许范围
     main_range = target_main_stats & allowed_main or allowed_main

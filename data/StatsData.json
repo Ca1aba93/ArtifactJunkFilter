@@ -35,7 +35,8 @@
       "average": 253.94,
       "weight": 150,
       "xiaozhushou_multiplier": 0.0001716
-    }
+    },
+    "good_format": "hp"
   },
   {
     "en": "ATK",
@@ -73,7 +74,8 @@
       "average": 16.535000324249268,
       "weight": 150,
       "xiaozhushou_multiplier": 0.00199
-    }
+    },
+    "good_format": "atk"
   },
   {
     "en": "DEF",
@@ -89,7 +91,8 @@
       "average": 19.675000190734863,
       "weight": 150,
       "xiaozhushou_multiplier": 0.002211
-    }
+    },
+    "good_format": "def"
   },
   {
     "en": "HP%",
@@ -121,13 +124,14 @@
     },
     "sub_value": {
       "tier1": 0.040800001472234726,
-      "tier2": 0.04659999907016754,
-      "tier3": 0.05249999836087227,
-      "tier4": 0.05829999968409538,
+      "tier2": 0.046599999070167542,
+      "tier3": 0.052499998360872269,
+      "tier4": 0.058299999684095383,
       "average": 0.04954999964684248,
       "weight": 100,
       "xiaozhushou_multiplier": 1.33
-    }
+    },
+    "good_format": "hp_"
   },
   {
     "en": "ATK%",
@@ -159,13 +163,14 @@
     },
     "sub_value": {
       "tier1": 0.040800001472234726,
-      "tier2": 0.04659999907016754,
-      "tier3": 0.05249999836087227,
-      "tier4": 0.05829999968409538,
+      "tier2": 0.046599999070167542,
+      "tier3": 0.052499998360872269,
+      "tier4": 0.058299999684095383,
       "average": 0.04954999964684248,
       "weight": 100,
       "xiaozhushou_multiplier": 1.33
-    }
+    },
+    "good_format": "atk_"
   },
   {
     "en": "DEF%",
@@ -197,13 +202,14 @@
     },
     "sub_value": {
       "tier1": 0.050999999046325684,
-      "tier2": 0.05829999968409538,
-      "tier3": 0.06560000032186508,
-      "tier4": 0.07289999723434448,
-      "average": 0.06194999907165766,
+      "tier2": 0.058299999684095383,
+      "tier3": 0.065600000321865082,
+      "tier4": 0.072899997234344482,
+      "average": 0.061949999071657658,
       "weight": 100,
       "xiaozhushou_multiplier": 1.06
-    }
+    },
+    "good_format": "def_"
   },
   {
     "en": "Elemental Mastery",
@@ -234,14 +240,15 @@
       "20": 187
     },
     "sub_value": {
-      "tier1": 16.31999969482422,
+      "tier1": 16.319999694824219,
       "tier2": 18.649999618530273,
       "tier3": 20.979999542236328,
       "tier4": 23.309999465942383,
       "average": 19.8149995803833,
       "weight": 100,
       "xiaozhushou_multiplier": 0.0033
-    }
+    },
+    "good_format": "eleMas"
   },
   {
     "en": "Energy Recharge%",
@@ -272,14 +279,15 @@
       "20": 0.518
     },
     "sub_value": {
-      "tier1": 0.04529999941587448,
-      "tier2": 0.05180000141263008,
-      "tier3": 0.05829999968409538,
-      "tier4": 0.06480000168085098,
-      "average": 0.05505000054836273,
+      "tier1": 0.045299999415874481,
+      "tier2": 0.051800001412630081,
+      "tier3": 0.058299999684095383,
+      "tier4": 0.064800001680850983,
+      "average": 0.055050000548362732,
       "weight": 100,
       "xiaozhushou_multiplier": 1.1979
-    }
+    },
+    "good_format": "enerRech_"
   },
   {
     "en": "CRIT Rate%",
@@ -312,12 +320,13 @@
     "sub_value": {
       "tier1": 0.0272000003606081,
       "tier2": 0.031099999323487282,
-      "tier3": 0.03500000014901161,
-      "tier4": 0.03889999911189079,
-      "average": 0.03304999973624945,
+      "tier3": 0.035000000149011612,
+      "tier4": 0.038899999111890793,
+      "average": 0.033049999736249447,
       "weight": 75,
       "xiaozhushou_multiplier": 2
-    }
+    },
+    "good_format": "critRate_"
   },
   {
     "en": "CRIT DMG%",
@@ -350,12 +359,13 @@
     "sub_value": {
       "tier1": 0.0544000007212162,
       "tier2": 0.062199998646974564,
-      "tier3": 0.06989999860525131,
-      "tier4": 0.07769999653100967,
-      "average": 0.06604999862611294,
+      "tier3": 0.069899998605251312,
+      "tier4": 0.077699996531009674,
+      "average": 0.066049998626112938,
       "weight": 75,
       "xiaozhushou_multiplier": 1
-    }
+    },
+    "good_format": "critDMG_"
   },
   {
     "en": "Healing%",
@@ -385,7 +395,8 @@
       "19": 0.344,
       "20": 0.359
     },
-    "sub_value": null
+    "sub_value": null,
+    "good_format": "heal_"
   },
   {
     "en": "Pyro",
@@ -415,7 +426,8 @@
       "19": 0.446,
       "20": 0.466
     },
-    "sub_value": null
+    "sub_value": null,
+    "good_format": "pyro_dmg_"
   },
   {
     "en": "Electro",
@@ -445,7 +457,8 @@
       "19": 0.446,
       "20": 0.466
     },
-    "sub_value": null
+    "sub_value": null,
+    "good_format": "electro_dmg_"
   },
   {
     "en": "Cryo",
@@ -475,7 +488,8 @@
       "19": 0.446,
       "20": 0.466
     },
-    "sub_value": null
+    "sub_value": null,
+    "good_format": "cryo_dmg_"
   },
   {
     "en": "Hydro",
@@ -505,7 +519,8 @@
       "19": 0.446,
       "20": 0.466
     },
-    "sub_value": null
+    "sub_value": null,
+    "good_format": "hydro_dmg_"
   },
   {
     "en": "Dendro",
@@ -535,7 +550,8 @@
       "19": 0.446,
       "20": 0.466
     },
-    "sub_value": null
+    "sub_value": null,
+    "good_format": "dendro_dmg_"
   },
   {
     "en": "Anemo",
@@ -565,7 +581,8 @@
       "19": 0.446,
       "20": 0.466
     },
-    "sub_value": null
+    "sub_value": null,
+    "good_format": "anemo_dmg_"
   },
   {
     "en": "Geo",
@@ -595,7 +612,8 @@
       "19": 0.446,
       "20": 0.466
     },
-    "sub_value": null
+    "sub_value": null,
+    "good_format": "geo_dmg_"
   },
   {
     "en": "Physical",
@@ -625,6 +643,7 @@
       "19": 0.558,
       "20": 0.583
     },
-    "sub_value": null
+    "sub_value": null,
+    "good_format": "physical_dmg_"
   }
 ]

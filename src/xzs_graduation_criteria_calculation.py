@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from src.artifact_generation_probability import get_probability_for_combination
-from src.basic_data import xzs_configs, sub_stats_for_all, main_weights, get_criteria, half_up, artifact_types
+from src.basic_data import xzs_configs, all_substats, main_weights, get_criteria, half_up, artifact_types
 from src.expansion_xzs_config import XZSConfig
 
 mpl.use("TkAgg")
@@ -29,7 +29,7 @@ def get_combinations_with_target_substats(target_stats: set, artifact_type: str)
     # 获取属性允许范围
     allowed_main = get_allowed_main_stats(artifact_type)
     main_range = target_stats & allowed_main or allowed_main  # 花或羽
-    all_sub = sub_stats_for_all.copy()
+    all_sub = all_substats.copy()
     sub_range = target_stats & all_sub  # 副词条允许范围只能为交集
     sub_complement = all_sub - sub_range  # 补充副词条只能从补集中获取
 
