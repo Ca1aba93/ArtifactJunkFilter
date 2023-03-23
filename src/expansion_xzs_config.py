@@ -1,7 +1,7 @@
 import io
 
 from src.basic_data import get_config_of_xzs, char_data, stats_data, set_config, id_chs, xzs_multi_factor, \
-    get_allowed_main_stats, all_substats, sub_weights, get_criteria
+    get_allowed_main_stats, all_substats, sub_weights, get_criteria, xzs_configs
 
 
 class XZSConfig:

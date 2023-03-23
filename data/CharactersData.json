@@ -9,6 +9,14 @@
     "good_format": "Albedo"
   },
   {
+    "id": "alhaitham",
+    "en": "Alhaitham",
+    "chs": "艾尔海森",
+    "element": "Dendro",
+    "is_heal": false,
+    "usage_ranking": 2
+  },
+  {
     "id": "aloy",
     "en": "Aloy",
     "chs": "埃洛伊",
@@ -387,6 +395,14 @@
     "good_format": "Shenhe"
   },
   {
+    "id": "shikanoin_heizou",
+    "en": "Shikanoin Heizou",
+    "chs": "鹿野院平藏",
+    "element": "Anemo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
     "id": "sucrose",
     "en": "Sucrose",
     "chs": "砂糖",
@@ -421,6 +437,38 @@
     "is_heal": false,
     "usage_ranking": 3,
     "good_format": "Tighnari"
+  },
+  {
+    "id": "traveler_anemo",
+    "en": "Traveler (Anemo)",
+    "chs": "旅行者 (风)",
+    "element": "Anemo",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "traveler_dendro",
+    "en": "Traveler (Dendro)",
+    "chs": "旅行者 (草)",
+    "element": "Dendro",
+    "is_heal": false,
+    "usage_ranking": 4
+  },
+  {
+    "id": "traveler_electro",
+    "en": "Traveler (Electro)",
+    "chs": "旅行者 (雷)",
+    "element": "Electro",
+    "is_heal": false,
+    "usage_ranking": 5
+  },
+  {
+    "id": "traveler_geo",
+    "en": "Traveler (Geo)",
+    "chs": "旅行者 (岩)",
+    "element": "Geo",
+    "is_heal": false,
+    "usage_ranking": 5
   },
   {
     "id": "venti",
@@ -493,6 +541,14 @@
     "is_heal": false,
     "usage_ranking": 5,
     "good_format": "Yanfei"
+  },
+  {
+    "id": "yaoyao",
+    "en": "Yaoyao",
+    "chs": "瑶瑶",
+    "element": "Dendro",
+    "is_heal": true,
+    "usage_ranking": 4
   },
   {
     "id": "yelan",
