@@ -3,32 +3,33 @@ import json
 import multiprocessing as mp
 import os
 
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 
 from src.artifact_generation_probability import get_probability_for_combination
-from src.basic_data import xzs_configs, sub_stats, main_weights, get_criteria, half_up
+from src.basic_data import xzs_configs, sub_stats_for_all, main_weights, get_criteria, half_up, artifact_types
 from src.expansion_xzs_config import XZSConfig
+
+mpl.use("TkAgg")
+lock = mp.Lock()
 
 current_dir = os.path.dirname(__file__)
 parent_dir = os.path.dirname(current_dir)
 
-all_equip_type = ['flower', 'plume', 'sands', 'goblet', 'circlet']
-lock = mp.Lock()
-
 
 # 通过圣遗物的装备类型获得该部位的主词条范围
-def get_allowed_main_stats(equip_type: str) -> set:
-    properties = main_weights.get(equip_type, {})
+def get_allowed_main_stats(artifact_type: str) -> set:
+    properties = main_weights.get(artifact_type, {})
     return set(properties.keys())
 
 
 # 获得只包含1、2、3、4个目标副词条的组合
-def get_combinations_with_target_substats(target_stats: set, equip_type: str):
+def get_combinations_with_target_substats(target_stats: set, artifact_type: str):
     # 获取属性允许范围
-    allowed_main = get_allowed_main_stats(equip_type)
+    allowed_main = get_allowed_main_stats(artifact_type)
     main_range = target_stats & allowed_main or allowed_main  # 花或羽
-    all_sub = sub_stats.copy()
+    all_sub = sub_stats_for_all.copy()
     sub_range = target_stats & all_sub  # 副词条允许范围只能为交集
     sub_complement = all_sub - sub_range  # 补充副词条只能从补集中获取
 
@@ -79,14 +80,14 @@ def get_combinations_with_target_substats(target_stats: set, equip_type: str):
 def get_probability_distribution_for_config(config_index):
     config = XZSConfig(config_index)
     prob_dist_for_config = {}
-    for equip_type in all_equip_type:
-        exclusive_combinations = get_combinations_with_target_substats(config.target_stats, equip_type)
+    for artifact_type in artifact_types:
+        exclusive_combinations = get_combinations_with_target_substats(config.target_stats, artifact_type)
         prob_dist_for_combinations = {}
         for combination in exclusive_combinations:
             score = 0
             score += config.get_expected_score(combination)
             score = half_up(score, 2)
-            prob = get_probability_for_combination(combination, equip_type)
+            prob = get_probability_for_combination(combination, artifact_type)
             if score not in prob_dist_for_combinations.keys():
                 prob_dist_for_combinations[score] = prob
             else:
@@ -96,7 +97,7 @@ def get_probability_distribution_for_config(config_index):
             prob_dist_for_combinations[0.0] = other_comb_prob
         else:
             prob_dist_for_combinations[0.0] += other_comb_prob
-        prob_dist_for_config[equip_type] = prob_dist_for_combinations
+        prob_dist_for_config[artifact_type] = prob_dist_for_combinations
     return prob_dist_for_config
 
 
@@ -104,14 +105,15 @@ def get_probability_distribution_for_config(config_index):
 def plot_probability_distribution_for_config(config_index: int):
     prob_dist_for_config = get_probability_distribution_for_config(config_index)
     score_standards = get_criteria(config_index)
-    n_equip_types = len(prob_dist_for_config)
-    fig, axes = plt.subplots(n_equip_types, 2, figsize=(15, 4 * n_equip_types))
+    num_artifact_types = len(prob_dist_for_config)
+    print(num_artifact_types)
+    fig, axes = plt.subplots(num_artifact_types, 2, figsize=(15, 4 * num_artifact_types))
 
-    for idx, (equip_type, prob_dist) in enumerate(prob_dist_for_config.items()):
-        intervals = score_standards[equip_type]
+    for idx, (artifact_type, prob_dist) in enumerate(prob_dist_for_config.items()):
+        intervals = score_standards[artifact_type]
         print(intervals)
 
-        print(f'Probability Distribution for {equip_type}:')
+        print(f'Probability Distribution for {artifact_type}:')
         print(f'Interval Probability Distribution:')
         interval_probabilities = []
 
@@ -131,7 +133,7 @@ def plot_probability_distribution_for_config(config_index: int):
         x_raw = [score for score in prob_dist.keys() if score != 0]
         y_raw = [prob_dist[score] for score in x_raw]
         axes[idx, 0].bar(x_raw, y_raw, align='center', alpha=0.5)
-        axes[idx, 0].set_title(f'Original Probability Distribution for {equip_type}', fontsize=10)
+        axes[idx, 0].set_title(f'Original Probability Distribution for {artifact_type}', fontsize=10)
         axes[idx, 0].set_xlabel('Score', fontsize=8)
         axes[idx, 0].set_ylabel('Probability', fontsize=8)
 
@@ -140,7 +142,7 @@ def plot_probability_distribution_for_config(config_index: int):
                                              range(len(intervals) - 1)] + [f'>={intervals[-1]}']
         interval_probabilities = [lower_bound_prob] + interval_probabilities + [upper_bound_prob]
         bars = axes[idx, 1].bar(x_interval, interval_probabilities, align='center', alpha=0.5)
-        axes[idx, 1].set_title(f'Interval Probability Distribution for {equip_type}', fontsize=10)
+        axes[idx, 1].set_title(f'Interval Probability Distribution for {artifact_type}', fontsize=10)
         axes[idx, 1].set_xlabel('Score Interval', fontsize=8)
         axes[idx, 1].set_ylabel('Probability', fontsize=8)
 
@@ -169,7 +171,7 @@ def get_graduation_criteria_for_all_setting(config_index: int, num_samples: int,
     lock.acquire()
     prob_dist_for_all_setting = get_probability_distribution_for_config(config_index)
     graduation_criteria_for_all_setting = {}
-    for artifact_type in all_equip_type:
+    for artifact_type in artifact_types:
         graduation_criteria = []
         artifact_sample = prob_dist_for_all_setting[artifact_type]
         for time in time_threshold:
@@ -195,5 +197,5 @@ def get_all_graduation_criteria(num_samples: int, time_threshold=[9, 18, 36, 108
 
 
 if __name__ == '__main__':
-    # get_all_graduation_criteria(500000)
+    # plot_probability_distribution_for_config(28)
     pass

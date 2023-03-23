@@ -45,7 +45,7 @@ xzs_multi_factor = {'atk': 0.03290465, 'atk%': 0.0659015, 'cd': 0.06605, 'cr': 0
 # 权重词典
 sub_weights = {'hp': 150, 'atk': 150, 'def': 150, 'hp%': 100, 'atk%': 100,
                'def%': 100, 'er': 100, 'em': 100, 'cr': 75, 'cd': 75}
-sub_stats = {'atk%', 'def', 'atk', 'hp', 'em', 'def%', 'hp%', 'cr', 'er', 'cd'}
+sub_stats_for_all = {'atk%', 'def', 'atk', 'hp', 'em', 'def%', 'hp%', 'cr', 'er', 'cd'}
 
 main_weights = {
     "flower": {'hp': 1000},
