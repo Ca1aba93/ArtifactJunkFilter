@@ -1,13 +1,14 @@
 import itertools
 import multiprocessing as mp
 import os
+import re
 
 import numpy as np
 import pandas as pd
 
 from src.artifact_data_processing import Artifact
 from src.basic_data import xzs_multi_factor, half_up, sub_weights, std_artifacts, \
-    xzs_configs, artifact_types, get_artifacts_name_by_type
+    xzs_configs, artifact_types, get_artifacts_name_by_type, id_chs
 from src.expansion_xzs_config import XZSConfig
 
 current_dir = os.path.dirname(__file__)
@@ -270,7 +271,7 @@ def artifacts_above_threshold(evaluation_df, threshold):
     return qualified_config_results
 
 
-def configs_with_qualified_artifacts(evaluation_df, threshold):
+def configs_with_qualified_artifacts(evaluation_df, threshold, show_details=False):
     qualified_artifacts_mask = evaluation_df >= threshold
 
     qualified_artifacts_by_config = {}
@@ -281,9 +282,55 @@ def configs_with_qualified_artifacts(evaluation_df, threshold):
 
     print("各配置下符合条件的圣遗物：")
     for config_name, artifacts in qualified_artifacts_by_config.items():
-        print(f"配置 {config_name}: 圣遗物={artifacts}")
+        if show_details:
+            show_details_data(config_name)
+            print("适用于该配置的圣遗物：")
+            for artifact in artifacts:
+                show_details_data(artifact)
+        else:
+            print(f"配置 {config_name}: 圣遗物={artifacts}")
 
     return qualified_artifacts_by_config
+
+
+# 根据名称，展示圣遗物/配置的主要属性
+def show_details_data(the_name):
+    class_name = re.sub(r'[\d_]+', '', the_name)
+    idx = int(re.sub(r'\D+', '', the_name)) - 1
+    if class_name == 'xzs':
+        print(XZSConfig(idx))
+    else:
+        print(Artifact(idx))
+    return
+
+
+# 展示最终分配结果
+def show_assigned_result(assigned_artifacts: dict, show_details=True):
+    for config_name, artifacts_by_type in assigned_artifacts.items():
+        config_has_artifacts = False
+        for artifact_type, artifacts in artifacts_by_type.items():
+            if artifacts:
+                config_has_artifacts = True
+                break
+        if config_has_artifacts:
+            if show_details:
+                print("小助手配置为：")
+                show_details_data(config_name)
+                print("该配置分配的圣遗物为：")
+                for artifact_type, artifacts in artifacts_by_type.items():
+                    if artifacts:
+                        print(f"{id_chs(artifact_type)}部位:")
+                        for artifact in artifacts:
+                            show_details_data(artifact)
+                print('')
+            else:
+                print(f"小助手配置为：{config_name}")
+                print("该配置分配的圣遗物为：")
+                for artifact_type, artifacts in artifacts_by_type.items():
+                    if artifacts:
+                        print(f"{id_chs(artifact_type)}部位:")
+                        print(artifacts)
+                print('')
 
 
 if __name__ == "__main__":
