@@ -1,4 +1,5 @@
 import itertools
+import json
 import multiprocessing as mp
 import os
 import re
@@ -10,6 +11,7 @@ from src.artifact_data_processing import Artifact
 from src.basic_data import xzs_multi_factor, half_up, sub_weights, std_artifacts, \
     xzs_configs, artifact_types, get_artifacts_name_by_type, id_chs
 from src.expansion_xzs_config import XZSConfig
+from src.good_to_standard_converter import raw_good_data
 
 current_dir = os.path.dirname(__file__)
 parent_dir = os.path.dirname(current_dir)
@@ -331,6 +333,32 @@ def show_assigned_result(assigned_artifacts: dict, show_details=True):
                         print(f"{id_chs(artifact_type)}部位:")
                         print(artifacts)
                 print('')
+
+
+# 将所有被分配的圣遗物上锁（仅针对good）
+def get_assigned_artifact_locked(assigned_artifacts):
+    assigned_artifact_names = []
+    assigned_artifact_indices = []
+
+    for config_name in assigned_artifacts:
+        for artifact_type in assigned_artifacts[config_name]:
+            assigned_artifact_names.extend(assigned_artifacts[config_name][artifact_type])
+
+    for assigned_artifact in assigned_artifact_names:
+        artifact_idx = int(re.sub(r'\D+', '', assigned_artifact)) - 1
+        assigned_artifact_indices.append(artifact_idx)
+    assigned_artifact_indices.sort()
+
+    good_data = raw_good_data.copy()
+    good_artifacts = good_data['artifacts']
+    for good_artifact in good_artifacts:
+        good_artifact['lock'] = False
+    for idx in assigned_artifact_indices:
+        good_artifacts[idx]['lock'] = True
+
+    with open(os.path.join(parent_dir, "new_good.json"), "w", encoding='utf-8-sig') as f:
+        json.dump(good_data, f)
+    print("已导出new_good.json,使用前请确认之前导入的圣遗物数据是good.json！")
 
 
 if __name__ == "__main__":

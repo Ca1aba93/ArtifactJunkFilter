@@ -9,9 +9,9 @@ parent_dir = os.path.dirname(current_dir)
 
 # good格式数据
 with open(os.path.join(parent_dir, 'good.json'), 'r', encoding='utf-8-sig') as file:
-    raw_mona_data = json.load(file)
+    raw_good_data = json.load(file)
 
-good_artifacts = raw_mona_data['artifacts']
+good_artifacts = raw_good_data['artifacts']
 
 
 # 从good格式到id的查找函数
@@ -77,6 +77,7 @@ def convert_good_to_standard_for_all():
         json.dump(standard_artifacts, f)
     with open(os.path.join(parent_dir, "data\\ArtifactsNameByType.json"), "w", encoding='utf-8-sig') as f:
         json.dump(names_by_type, f)
+    print("已将good.json数据转化为标准格式！")
     return
 
 

@@ -1,5 +1,6 @@
 from src.artifact_data_analysis import evaluate_all_artifacts_and_configs, artifacts_above_threshold, \
-    configs_with_qualified_artifacts, assign_artifacts_to_selected_configs, get_selected_configs, show_assigned_result
+    configs_with_qualified_artifacts, assign_artifacts_to_selected_configs, get_selected_configs, show_assigned_result, \
+    get_assigned_artifact_locked
 from src.good_to_standard_converter import convert_good_to_standard_for_all
 from src.mona_to_standard_converter import convert_mona_to_standard_for_all
 
@@ -21,6 +22,7 @@ if __name__ == "__main__":
     # 自动分配，按照配置顺序一件一件变量循环，保证每个配置都能分配到，且最好的圣遗物能分配给排名最高的配置
     result = assign_artifacts_to_selected_configs(evaluate_df, get_selected_configs(target_config), assign_threshold)
     # 分配结果展示
-    print(result)
-    show_assigned_result(result)
+    # print(result)
+    # show_assigned_result(result)
+    get_assigned_artifact_locked(result)
     # 其余功能正在开发中

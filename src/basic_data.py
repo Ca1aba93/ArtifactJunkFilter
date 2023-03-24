@@ -6,12 +6,6 @@ from decimal import Decimal, ROUND_HALF_UP
 current_dir = os.path.dirname(__file__)
 parent_dir = os.path.dirname(current_dir)
 
-# mona格式数据
-with open(os.path.join(parent_dir, 'mona.json'), 'r', encoding='utf-8-sig') as file:
-    raw_mona_data = json.load(file)
-mona_artifacts = raw_mona_data.get("flower") + raw_mona_data.get("feather") + raw_mona_data.get("sand") + \
-                 raw_mona_data.get("cup") + raw_mona_data.get("head")
-
 # 不可更改游戏配置数据
 with open(os.path.join(parent_dir, "data\\CharactersData.json"), 'r', encoding='utf-8-sig') as file:
     char_data = json.load(file)
