@@ -336,9 +336,9 @@ def show_assigned_result(assigned_artifacts: dict, show_details=True):
 
 
 # 将所有被分配的圣遗物上锁（仅针对good）
-def get_assigned_artifact_locked(assigned_artifacts):
+def get_locked_for_yas(assigned_artifacts):
     assigned_artifact_names = []
-    assigned_artifact_indices = []
+    assigned_artifact_indices = set()
 
     for config_name in assigned_artifacts:
         for artifact_type in assigned_artifacts[config_name]:
@@ -346,19 +346,39 @@ def get_assigned_artifact_locked(assigned_artifacts):
 
     for assigned_artifact in assigned_artifact_names:
         artifact_idx = int(re.sub(r'\D+', '', assigned_artifact)) - 1
-        assigned_artifact_indices.append(artifact_idx)
-    assigned_artifact_indices.sort()
+        assigned_artifact_indices.add(artifact_idx)
 
     good_data = raw_good_data.copy()
     good_artifacts = good_data['artifacts']
-    for good_artifact in good_artifacts:
-        good_artifact['lock'] = False
-    for idx in assigned_artifact_indices:
-        good_artifacts[idx]['lock'] = True
+    raw_locked = set()
+    raw_unlock = set()
+    validation = []  # 原始状况
+    for idx, good_artifact in enumerate(good_artifacts):
+        validation.append({
+            "index": idx,
+            "locked": good_artifact['lock']
+        })
+        if good_artifact['lock']:
+            raw_locked.add(idx)
+        else:
+            raw_unlock.add(idx)
+    # 需要解锁的圣遗物序号
+    lock_indices = sorted(list(raw_locked - assigned_artifact_indices))
+    # 需要上锁的圣遗物序号
+    unlock_indices = sorted(list(assigned_artifact_indices & raw_unlock))
+    flip_indices = sorted(list(set(lock_indices).union(set(unlock_indices))))
+    result = {"version": 2,
+              "flip_indices": flip_indices,
+              "lock_indices": lock_indices,
+              "unlock_indices": unlock_indices,
+              "validation": validation
+              }
 
-    with open(os.path.join(parent_dir, "new_good.json"), "w", encoding='utf-8-sig') as f:
-        json.dump(good_data, f)
-    print("已导出new_good.json,使用前请确认之前导入的圣遗物数据是good.json！")
+    with open(os.path.join(parent_dir, "lock.json"), "w", encoding='utf-8') as f:
+        json.dump(result, f)
+
+    print("已导出lock.json,使用前请确认之前导入的圣遗物数据是good.json！")
+    return
 
 
 if __name__ == "__main__":
