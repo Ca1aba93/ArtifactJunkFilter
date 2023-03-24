@@ -1,3 +1,17 @@
+使用yas-lock时有两点需要注意：
+
+1、升级到最新版
+
+2、使用时保持界面不移动
+
+下面是错误示范
+
+![image-20230325014457672](C:\Users\55464\AppData\Roaming\Typora\typora-user-images\image-20230325014457672.png)
+
+这是正确使用姿势
+
+![正确示例](C:\Users\55464\Desktop\原神辅助\正确示例.png)
+
 # ArtifactJunkFilter
 
 ArtifactJunkFilter 是一款狗粮过滤器，它可以帮助你筛选出那些不需要的圣遗物，以便更好地管理你的圣遗物库。
