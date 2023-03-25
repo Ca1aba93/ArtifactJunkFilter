@@ -1,16 +1,4 @@
-使用yas-lock时有两点需要注意：
-
-1、升级到最新版
-
-2、使用时保持界面不移动
-
-下面是错误示范
-
-![image-20230325014457672](C:\Users\55464\AppData\Roaming\Typora\typora-user-images\image-20230325014457672.png)
-
-这是正确使用姿势
-
-![正确示例](C:\Users\55464\Desktop\原神辅助\正确示例.png)
+使用yas-lock时需要注意：请使用支持V2格式的yas-lock1.0.9-beta1版本，下载链接在这里：https://github.com/ideless/yas-lock/releases/tag/v1.0.9
 
 # ArtifactJunkFilter
 
