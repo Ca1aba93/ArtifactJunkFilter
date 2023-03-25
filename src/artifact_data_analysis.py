@@ -61,15 +61,15 @@ rule_decorator.rules = []
 
 
 @rule_decorator
-def rule_1(artifact_id: int, config_id: int, evaluation_level):
+def rule_0(artifact_id: int, config_id: int, evaluation_level):
     # 规则 1: 维持原样
-    artifact = Artifact(artifact_id)
-    config = XZSConfig(config_id)
+    # artifact = Artifact(artifact_id)
+    # config = XZSConfig(config_id)
     return evaluation_level
 
 
 @rule_decorator
-def rule_2(artifact_id: int, config_id: int, evaluation_level):
+def rule_1(artifact_id: int, config_id: int, evaluation_level):
     # 规则 2: （除杯外）主属性与套装必须正确，否则评级降为0，其中冠的主属性必须是双爆
     # 杯的套装可以不正确，但是主属性必须是元素，并且评级大于1
     artifact = Artifact(artifact_id)
