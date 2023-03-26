@@ -366,7 +366,7 @@ def get_locked_for_yas(assigned_artifacts):
     lock_indices = sorted(list(raw_locked - assigned_artifact_indices))
     # 需要上锁的圣遗物序号
     unlock_indices = sorted(list(assigned_artifact_indices & raw_unlock))
-    flip_indices = sorted(list(set(lock_indices).union(set(unlock_indices))))
+    flip_indices = []
     result = {"version": 2,
               "flip_indices": flip_indices,
               "lock_indices": lock_indices,

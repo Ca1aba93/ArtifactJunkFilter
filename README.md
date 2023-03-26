@@ -1,4 +1,4 @@
-使用yas-lock时需要注意：请使用支持V2格式的yas-lock1.0.9-beta1版本，下载链接在这里：https://github.com/ideless/yas-lock/releases/tag/v1.0.9
+使用yas-lock时需要注意：请使用支持V2格式的yas-lock1.0.9-beta2版本，下载链接在这里：https://github.com/ideless/yas-lock/releases/tag/v1.0.9
 
 # ArtifactJunkFilter
 
