@@ -28,6 +28,8 @@ pd.set_option('display.max_rows', None)
 def test():
     pass
 
+def
+
 
 def check_main_stat(artifact_id: int, config_id: int):
     artifact = Artifact(artifact_id)
