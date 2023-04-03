@@ -1,8 +1,7 @@
 from src.artifact_data_analysis import evaluate_all_artifacts_and_configs, artifacts_above_threshold, \
     configs_with_qualified_artifacts, assign_artifacts_to_selected_configs, \
     get_selected_configs, show_assigned_result, get_locked_for_yas
-from src.good_to_standard_converter import convert_good_to_standard_for_all
-from src.mona_to_standard_converter import convert_mona_to_standard_for_all
+from src.basic_data import convert_to_standard
 from src.xzs_graduation_criteria_calculation import get_all_graduation_criteria
 
 if __name__ == "__main__":
@@ -11,8 +10,9 @@ if __name__ == "__main__":
     # get_all_graduation_criteria(10000, time_threshold)  # 使用蒙特卡洛模拟计算小助手毕业标准,毕业阈值可不添加，默认为10/20/40/120天
 
     """2、在这里导入自己的圣遗物数据"""
-    # convert_mona_to_standard_for_all()  # 从mona.json中导入圣遗物数据
-    convert_good_to_standard_for_all()  # 从good.json中导入圣遗物数据
+    # mona: 从mona.json中导入圣遗物数据
+    # good: 从good.json中导入圣遗物数据
+    convert_to_standard("good")
 
     """3、在这里对圣遗物进行评分"""
     rules = [1]  # 评分规则，目前就两个：0为不做任何调整，1为主属性圣遗物都必须正确的严苛版，后期可给出规则自由搭配

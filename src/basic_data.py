@@ -1,3 +1,4 @@
+import importlib
 import itertools
 import json
 import os
@@ -197,6 +198,16 @@ def set_decimal_for_good(stat_id: str, temp_res: float):
         temp4 = Decimal(str(temp5)).quantize(Decimal("0.0000"), rounding=ROUND_HALF_UP)
         res = float(Decimal(str(temp4)).quantize(Decimal("0.000"), rounding=ROUND_HALF_UP))
     return res
+
+
+def convert_to_standard(format):
+    match format:
+        case "good":
+            model = importlib.import_module("src.good_to_standard_converter")
+            model.convert_good_to_standard_for_all()
+        case "mona":
+            model = importlib.import_module("src.mona_to_standard_converter")
+            model.convert_mona_to_standard_for_all()
 
 
 if __name__ == "__main__":
