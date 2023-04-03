@@ -73,9 +73,9 @@ def convert_good_to_standard_for_all():
             continue  # Exclude 4-star artifacts
         standard_artifacts.append(convert_good_to_standard_format(idx))
         names_by_type[good_id(good_art['slotKey'])].append(convert_good_to_standard_format(idx)['name'])
-    with open(os.path.join(parent_dir, "data\\StandardizedArtifactsData.json"), "w", encoding='utf-8-sig') as f:
+    with open(os.path.join(parent_dir, "data", "StandardizedArtifactsData.json"), "w", encoding='utf-8-sig') as f:
         json.dump(standard_artifacts, f)
-    with open(os.path.join(parent_dir, "data\\ArtifactsNameByType.json"), "w", encoding='utf-8-sig') as f:
+    with open(os.path.join(parent_dir, "data", "ArtifactsNameByType.json"), "w", encoding='utf-8-sig') as f:
         json.dump(names_by_type, f)
     print("已将good.json数据转化为标准格式！")
     return

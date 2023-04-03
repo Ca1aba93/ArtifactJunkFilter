@@ -8,25 +8,25 @@ current_dir = os.path.dirname(__file__)
 parent_dir = os.path.dirname(current_dir)
 
 # 不可更改游戏配置数据
-with open(os.path.join(parent_dir, "data\\CharactersData.json"), 'r', encoding='utf-8-sig') as file:
+with open(os.path.join(parent_dir, "data", "CharactersData.json"), 'r', encoding='utf-8-sig') as file:
     char_data = json.load(file)
-with open(os.path.join(parent_dir, "data\\SetsData.json"), 'r', encoding='utf-8-sig') as file:
+with open(os.path.join(parent_dir, "data", "SetsData.json"), 'r', encoding='utf-8-sig') as file:
     sets_data = json.load(file)
-with open(os.path.join(parent_dir, "data\\StatsData.json"), 'r', encoding='utf-8-sig') as file:
+with open(os.path.join(parent_dir, "data", "StatsData.json"), 'r', encoding='utf-8-sig') as file:
     stats_data = json.load(file)
-with open(os.path.join(parent_dir, "data\\XiaoZhuShouConfig.json"), 'r', encoding='utf-8-sig') as file:
+with open(os.path.join(parent_dir, "data", "XiaoZhuShouConfig.json"), 'r', encoding='utf-8-sig') as file:
     xzs_configs = json.load(file)
-with open(os.path.join(parent_dir, "data\\ArtifactTypeConfig.json"), 'r', encoding='utf-8-sig') as file:
+with open(os.path.join(parent_dir, "data", "ArtifactTypeConfig.json"), 'r', encoding='utf-8-sig') as file:
     type_config = json.load(file)
 
 # 计算生成
-with open(os.path.join(parent_dir, "data\\XZSGraduationCriteria.json"), 'r', encoding='utf-8-sig') as file:
+with open(os.path.join(parent_dir, "data", "XZSGraduationCriteria.json"), 'r', encoding='utf-8-sig') as file:
     xzs_criteria = json.load(file)
 
 # 随圣遗物改变
-with open(os.path.join(parent_dir, "data\\StandardizedArtifactsData.json"), 'r', encoding='utf-8-sig') as file:
+with open(os.path.join(parent_dir, "data", "StandardizedArtifactsData.json"), 'r', encoding='utf-8-sig') as file:
     std_artifacts = json.load(file)
-with open(os.path.join(parent_dir, "data\\ArtifactsNameByType.json"), 'r', encoding='utf-8-sig') as file:
+with open(os.path.join(parent_dir, "data", "ArtifactsNameByType.json"), 'r', encoding='utf-8-sig') as file:
     artifacts_name_by_type = json.load(file)
 
 # 小助手速算乘数:
