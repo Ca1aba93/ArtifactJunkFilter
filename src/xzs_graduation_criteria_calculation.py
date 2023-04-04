@@ -190,7 +190,7 @@ def get_all_graduation_criteria(num_samples: int, time_threshold=[9, 18, 36, 108
         for i, res in enumerate(async_results):
             graduation_criteria_for_config[i] = res.get()
 
-    with open(os.path.join(parent_dir, "data\\XZSGraduationCriteria.json"), "w", encoding='utf-8-sig') as f:
+    with open(os.path.join(parent_dir, "data", "XZSGraduationCriteria.json"), "w", encoding='utf-8-sig') as f:
         json.dump(graduation_criteria_for_config, f)
     print(f"小助手毕业标准已更新完毕，其阈值基于{time_threshold}次抽取。")
 
